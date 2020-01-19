@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<RptDataSource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Name="DataSource2">
+  <ConnectionProperties>
+    <Extension>OLEDB-MD</Extension>
+    <ConnectString>Data Source=DESKTOP-QR2QFPH</ConnectString>
+  </ConnectionProperties>
+  <DataSourceID>0318ee36-539a-45dc-9465-bda97c86e1d3</DataSourceID>
+</RptDataSource>
