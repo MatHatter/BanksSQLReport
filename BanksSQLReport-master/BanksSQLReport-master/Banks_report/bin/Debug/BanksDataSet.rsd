@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SharedDataSet xmlns="http://schemas.microsoft.com/sqlserver/reporting/2010/01/shareddatasetdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <DataSet Name="DataSet3">
+    <Query>
+      <DataSourceReference>BanksDataSource</DataSourceReference>
+      <CommandText>SELECT * FROM Citi_Earnings JOIN Goldman_Earnings Where CitiEarnings.RowNumber = Goldman_Earnings.RowNumber;</CommandText>
+    </Query>
+    <Fields>
+      <Field Name="RowNumber">
+        <DataField>RowNumber</DataField>
+        <rd:TypeName>System.Int32</rd:TypeName>
+      </Field>
+      <Field Name="Filing_Quarter">
+        <DataField>Filing_Quarter</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="Commissions_and_Fees">
+        <DataField>Commissions_and_Fees</DataField>
+        <rd:TypeName>System.Int32</rd:TypeName>
+      </Field>
+      <Field Name="Administration_and_Other_Fiduciary_Fees">
+        <DataField>Administration_and_Other_Fiduciary_Fees</DataField>
+        <rd:TypeName>System.Int32</rd:TypeName>
+      </Field>
+      <Field Name="Investment_Banking">
+        <DataField>Investment_Banking</DataField>
+        <rd:TypeName>System.Int32</rd:TypeName>
+      </Field>
+      <Field Name="Principal_Transactions">
+        <DataField>Principal_Transactions</DataField>
+        <rd:TypeName>System.Int32</rd:TypeName>
+      </Field>
+      <Field Name="Other">
+        <DataField>Other</DataField>
+        <rd:TypeName>System.Int32</rd:TypeName>
+      </Field>
+      <Field Name="Total_Non_Interest_Revenue">
+        <DataField>Total_Non_Interest_Revenue</DataField>
+        <rd:TypeName>System.Int32</rd:TypeName>
+      </Field>
+      <Field Name="Net_Interest_Revenue_including_Dividends">
+        <DataField>Net_Interest_Revenue_including_Dividends</DataField>
+        <rd:TypeName>System.Int32</rd:TypeName>
+      </Field>
+      <Field Name="Total_Revenues_Net_of_Interest_Expense">
+        <DataField>Total_Revenues_Net_of_Interest_Expense</DataField>
+        <rd:TypeName>System.Int32</rd:TypeName>
+      </Field>
+      <Field Name="Total_Operating_Expenses">
+        <DataField>Total_Operating_Expenses</DataField>
+        <rd:TypeName>System.Int32</rd:TypeName>
+      </Field>
+      <Field Name="Provisions_for_Credit_Losses_and_for_Benefits_and_Claims">
+        <DataField>Provisions_for_Credit_Losses_and_for_Benefits_and_Claims</DataField>
+        <rd:TypeName>System.Int32</rd:TypeName>
+      </Field>
+      <Field Name="Income_from_Continuing_Operations_before_Taxes">
+        <DataField>Income_from_Continuing_Operations_before_Taxes</DataField>
+        <rd:TypeName>System.Int32</rd:TypeName>
+      </Field>
+      <Field Name="Income_Taxes">
+        <DataField>Income_Taxes</DataField>
+        <rd:TypeName>System.Int32</rd:TypeName>
+      </Field>
+      <Field Name="Income_from_Continuing_Operations">
+        <DataField>Income_from_Continuing_Operations</DataField>
+        <rd:TypeName>System.Int32</rd:TypeName>
+      </Field>
+      <Field Name="Noncontrolling_Interests">
+        <DataField>Noncontrolling_Interests</DataField>
+        <rd:TypeName>System.Int32</rd:TypeName>
+      </Field>
+      <Field Name="Net_Income">
+        <DataField>Net_Income</DataField>
+        <rd:TypeName>System.Int32</rd:TypeName>
+      </Field>
+    </Fields>
+  </DataSet>
+</SharedDataSet>

@@ -1,0 +1,148 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SharedDataSet xmlns="http://schemas.microsoft.com/sqlserver/reporting/2010/01/shareddatasetdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <Description />
+  <DataSet Name="DataSet3">
+    <Query>
+      <DataSourceReference>Banking</DataSourceReference>
+      <CommandText>SELECT Citi_Earnings.RowNumber, Citi_Earnings.Filing_Quarter, Citi_Earnings.Commissions_and_Fees, Citi_Earnings.Administration_and_Other_Fiduciary_Fees, Citi_Earnings.Investment_Banking, Citi_Earnings.Total_Non_Interest_Revenue, Citi_Earnings.Net_Interest_Revenue_including_Dividends, Citi_Earnings.Total_Revenues_Net_of_Interest_Expense, Citi_Earnings.Total_Operating_Expenses, Citi_Earnings.Provisions_for_Credit_Losses_and_for_Benefits_and_Claims, Citi_Earnings.Income_from_Continuing_Operations_before_Taxes, Citi_Earnings.Income_Taxes, Citi_Earnings.Income_from_Continuing_Operations, Citi_Earnings.Noncontrolling_Interests, Citi_Earnings.Net_Income, Goldman_Earnings.RowNumber AS G_RowNumber, Goldman_Earnings.Filing_Quarter AS G_Filing_Quarter, Goldman_Earnings.Investment_banking AS G_Investment_banking, Goldman_Earnings.Investment_management, Goldman_Earnings.Trading_and_principle_investments, Goldman_Earnings.Asset_management_and_securities_services, Goldman_Earnings.Commissions_and_fees AS G_Commission_and_fees, Goldman_Earnings.Market_making, Goldman_Earnings.Other_principle_transactions, Goldman_Earnings.Total_non_interest_revenues, Goldman_Earnings.Net_interest_income, Goldman_Earnings.Total_net_revenues, Goldman_Earnings.Provision_for_credit_losses, Goldman_Earnings.Total_operating_expenses AS G_Total_operating_expenses, Goldman_Earnings.Pre_tax_earnings, Goldman_Earnings.Provision_for_taxes, Goldman_Earnings.Net_earnings, Citi_Earnings.Principal_Transactions, Citi_Earnings.Other FROM Citi_Earnings INNER JOIN Goldman_Earnings ON Citi_Earnings.RowNumber = Goldman_Earnings.RowNumber</CommandText>
+    </Query>
+    <Fields>
+      <Field Name="RowNumber">
+        <DataField>RowNumber</DataField>
+        <rd:TypeName>System.Int32</rd:TypeName>
+      </Field>
+      <Field Name="Filing_Quarter">
+        <DataField>Filing_Quarter</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="Commissions_and_Fees">
+        <DataField>Commissions_and_Fees</DataField>
+        <rd:TypeName>System.Int32</rd:TypeName>
+      </Field>
+      <Field Name="Administration_and_Other_Fiduciary_Fees">
+        <DataField>Administration_and_Other_Fiduciary_Fees</DataField>
+        <rd:TypeName>System.Int32</rd:TypeName>
+      </Field>
+      <Field Name="Investment_Banking">
+        <DataField>Investment_Banking</DataField>
+        <rd:TypeName>System.Int32</rd:TypeName>
+      </Field>
+      <Field Name="Total_Non_Interest_Revenue">
+        <DataField>Total_Non_Interest_Revenue</DataField>
+        <rd:TypeName>System.Int32</rd:TypeName>
+      </Field>
+      <Field Name="Net_Interest_Revenue_including_Dividends">
+        <DataField>Net_Interest_Revenue_including_Dividends</DataField>
+        <rd:TypeName>System.Int32</rd:TypeName>
+      </Field>
+      <Field Name="Total_Revenues_Net_of_Interest_Expense">
+        <DataField>Total_Revenues_Net_of_Interest_Expense</DataField>
+        <rd:TypeName>System.Int32</rd:TypeName>
+      </Field>
+      <Field Name="Total_Operating_Expenses">
+        <DataField>Total_Operating_Expenses</DataField>
+        <rd:TypeName>System.Int32</rd:TypeName>
+      </Field>
+      <Field Name="Provisions_for_Credit_Losses_and_for_Benefits_and_Claims">
+        <DataField>Provisions_for_Credit_Losses_and_for_Benefits_and_Claims</DataField>
+        <rd:TypeName>System.Int32</rd:TypeName>
+      </Field>
+      <Field Name="Income_from_Continuing_Operations_before_Taxes">
+        <DataField>Income_from_Continuing_Operations_before_Taxes</DataField>
+        <rd:TypeName>System.Int32</rd:TypeName>
+      </Field>
+      <Field Name="Income_Taxes">
+        <DataField>Income_Taxes</DataField>
+        <rd:TypeName>System.Int32</rd:TypeName>
+      </Field>
+      <Field Name="Income_from_Continuing_Operations">
+        <DataField>Income_from_Continuing_Operations</DataField>
+        <rd:TypeName>System.Int32</rd:TypeName>
+      </Field>
+      <Field Name="Noncontrolling_Interests">
+        <DataField>Noncontrolling_Interests</DataField>
+        <rd:TypeName>System.Int32</rd:TypeName>
+      </Field>
+      <Field Name="Net_Income">
+        <DataField>Net_Income</DataField>
+        <rd:TypeName>System.Int32</rd:TypeName>
+      </Field>
+      <Field Name="G_RowNumber">
+        <DataField>G_RowNumber</DataField>
+        <rd:TypeName>System.Int32</rd:TypeName>
+      </Field>
+      <Field Name="G_Filing_Quarter">
+        <DataField>G_Filing_Quarter</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="G_Investment_banking">
+        <DataField>G_Investment_banking</DataField>
+        <rd:TypeName>System.Int32</rd:TypeName>
+      </Field>
+      <Field Name="Investment_management">
+        <DataField>Investment_management</DataField>
+        <rd:TypeName>System.Int32</rd:TypeName>
+      </Field>
+      <Field Name="Trading_and_principle_investments">
+        <DataField>Trading_and_principle_investments</DataField>
+        <rd:TypeName>System.Int32</rd:TypeName>
+      </Field>
+      <Field Name="Asset_management_and_securities_services">
+        <DataField>Asset_management_and_securities_services</DataField>
+        <rd:TypeName>System.Int32</rd:TypeName>
+      </Field>
+      <Field Name="G_Commission_and_fees">
+        <DataField>G_Commission_and_fees</DataField>
+        <rd:TypeName>System.Int32</rd:TypeName>
+      </Field>
+      <Field Name="Market_making">
+        <DataField>Market_making</DataField>
+        <rd:TypeName>System.Int32</rd:TypeName>
+      </Field>
+      <Field Name="Other_principle_transactions">
+        <DataField>Other_principle_transactions</DataField>
+        <rd:TypeName>System.Int32</rd:TypeName>
+      </Field>
+      <Field Name="Total_non_interest_revenues">
+        <DataField>Total_non_interest_revenues</DataField>
+        <rd:TypeName>System.Int32</rd:TypeName>
+      </Field>
+      <Field Name="Net_interest_income">
+        <DataField>Net_interest_income</DataField>
+        <rd:TypeName>System.Int32</rd:TypeName>
+      </Field>
+      <Field Name="Total_net_revenues">
+        <DataField>Total_net_revenues</DataField>
+        <rd:TypeName>System.Int32</rd:TypeName>
+      </Field>
+      <Field Name="Provision_for_credit_losses">
+        <DataField>Provision_for_credit_losses</DataField>
+        <rd:TypeName>System.Int32</rd:TypeName>
+      </Field>
+      <Field Name="G_Total_operating_expenses">
+        <DataField>G_Total_operating_expenses</DataField>
+        <rd:TypeName>System.Int32</rd:TypeName>
+      </Field>
+      <Field Name="Pre_tax_earnings">
+        <DataField>Pre_tax_earnings</DataField>
+        <rd:TypeName>System.Int32</rd:TypeName>
+      </Field>
+      <Field Name="Provision_for_taxes">
+        <DataField>Provision_for_taxes</DataField>
+        <rd:TypeName>System.Int32</rd:TypeName>
+      </Field>
+      <Field Name="Net_earnings">
+        <DataField>Net_earnings</DataField>
+        <rd:TypeName>System.Int32</rd:TypeName>
+      </Field>
+      <Field Name="Principal_Transactions">
+        <DataField>Principal_Transactions</DataField>
+        <rd:TypeName>System.Int32</rd:TypeName>
+      </Field>
+      <Field Name="Other">
+        <DataField>Other</DataField>
+        <rd:TypeName>System.Int32</rd:TypeName>
+      </Field>
+    </Fields>
+  </DataSet>
+</SharedDataSet>

@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SharedDataSet xmlns="http://schemas.microsoft.com/sqlserver/reporting/2010/01/shareddatasetdefinition">
+  <DataSet Name="DataSet3">
+    <Query>
+      <DataSourceReference>BanksDataSource</DataSourceReference>
+      <CommandText>SELECT * FROM Citi_Earnings JOIN Goldman_Earnings ON Citi_Earnings.RowNumber = Goldman_Earnings.RowNumber;</CommandText>
+    </Query>
+  </DataSet>
+</SharedDataSet>

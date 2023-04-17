@@ -1,0 +1,1174 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner" xmlns:df="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition/defaultfontfamily" MustUnderstand="df">
+  <df:DefaultFontFamily>Segoe UI</df:DefaultFontFamily>
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="BanksDataSource">
+      <DataSourceReference>BanksDataSource</DataSourceReference>
+      <rd:SecurityType>None</rd:SecurityType>
+      <rd:DataSourceID>1b7b4107-a4c4-4ff9-a29e-8f4d2fd56d4e</rd:DataSourceID>
+    </DataSource>
+  </DataSources>
+  <DataSets>
+    <DataSet Name="DataSet1">
+      <Query>
+        <DataSourceName>BanksDataSource</DataSourceName>
+        <CommandText>SELECT * FROM Citi_Earnings;</CommandText>
+        <rd:UseGenericDesigner>true</rd:UseGenericDesigner>
+      </Query>
+      <Fields>
+        <Field Name="RowNumber">
+          <DataField>RowNumber</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="Filing_Quarter">
+          <DataField>Filing_Quarter</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Commissions_and_Fees">
+          <DataField>Commissions_and_Fees</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="Administration_and_Other_Fiduciary_Fees">
+          <DataField>Administration_and_Other_Fiduciary_Fees</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="Investment_Banking">
+          <DataField>Investment_Banking</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="Principal_Transactions">
+          <DataField>Principal_Transactions</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="Other">
+          <DataField>Other</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="Total_Non_Interest_Revenue">
+          <DataField>Total_Non_Interest_Revenue</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="Net_Interest_Revenue_including_Dividends">
+          <DataField>Net_Interest_Revenue_including_Dividends</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="Total_Revenues_Net_of_Interest_Expense">
+          <DataField>Total_Revenues_Net_of_Interest_Expense</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="Total_Operating_Expenses">
+          <DataField>Total_Operating_Expenses</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="Provisions_for_Credit_Losses_and_for_Benefits_and_Claims">
+          <DataField>Provisions_for_Credit_Losses_and_for_Benefits_and_Claims</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="Income_from_Continuing_Operations_before_Taxes">
+          <DataField>Income_from_Continuing_Operations_before_Taxes</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="Income_Taxes">
+          <DataField>Income_Taxes</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="Income_from_Continuing_Operations">
+          <DataField>Income_from_Continuing_Operations</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="Noncontrolling_Interests">
+          <DataField>Noncontrolling_Interests</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="Net_Income">
+          <DataField>Net_Income</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+      </Fields>
+    </DataSet>
+  </DataSets>
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <ReportItems>
+          <Textbox Name="textbox1">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>BanksReport1</Value>
+                    <Style>
+                      <FontFamily>Segoe UI Light</FontFamily>
+                      <FontSize>24pt</FontSize>
+                      <FontWeight>Bold</FontWeight>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>textbox1</rd:DefaultName>
+            <Height>0.43in</Height>
+            <Style>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Tablix Name="List1">
+            <TablixBody>
+              <TablixColumns>
+                <TablixColumn>
+                  <Width>5in</Width>
+                </TablixColumn>
+              </TablixColumns>
+              <TablixRows>
+                <TablixRow>
+                  <Height>3.65in</Height>
+                  <TablixCells>
+                    <TablixCell>
+                      <CellContents>
+                        <Rectangle Name="List1_Contents">
+                          <ReportItems>
+                            <Textbox Name="RowNumber">
+                              <CanGrow>true</CanGrow>
+                              <KeepTogether>true</KeepTogether>
+                              <Paragraphs>
+                                <Paragraph>
+                                  <TextRuns>
+                                    <TextRun>
+                                      <Value>=Fields!RowNumber.Value</Value>
+                                      <Style>
+                                        <FontFamily />
+                                        <FontSize>14pt</FontSize>
+                                      </Style>
+                                    </TextRun>
+                                  </TextRuns>
+                                  <Style />
+                                </Paragraph>
+                              </Paragraphs>
+                              <rd:DefaultName>RowNumber</rd:DefaultName>
+                              <Height>0.27in</Height>
+                              <Style>
+                                <FontFamily />
+                                <PaddingLeft>2pt</PaddingLeft>
+                                <PaddingRight>2pt</PaddingRight>
+                                <PaddingTop>2pt</PaddingTop>
+                                <PaddingBottom>2pt</PaddingBottom>
+                              </Style>
+                            </Textbox>
+                            <Tablix Name="matrix1">
+                              <TablixCorner>
+                                <TablixCornerRows>
+                                  <TablixCornerRow>
+                                    <TablixCornerCell>
+                                      <CellContents>
+                                        <Textbox Name="textbox3">
+                                          <CanGrow>true</CanGrow>
+                                          <KeepTogether>true</KeepTogether>
+                                          <Paragraphs>
+                                            <Paragraph>
+                                              <TextRuns>
+                                                <TextRun>
+                                                  <Value />
+                                                  <Style>
+                                                    <FontFamily />
+                                                    <Color>#333333</Color>
+                                                  </Style>
+                                                </TextRun>
+                                              </TextRuns>
+                                              <Style />
+                                            </Paragraph>
+                                          </Paragraphs>
+                                          <rd:DefaultName>textbox3</rd:DefaultName>
+                                          <Height>0.21in</Height>
+                                          <Style>
+                                            <Border>
+                                              <Color>LightGrey</Color>
+                                            </Border>
+                                            <FontFamily />
+                                            <PaddingLeft>2pt</PaddingLeft>
+                                            <PaddingRight>2pt</PaddingRight>
+                                            <PaddingTop>2pt</PaddingTop>
+                                            <PaddingBottom>2pt</PaddingBottom>
+                                          </Style>
+                                        </Textbox>
+                                        <RowSpan>14</RowSpan>
+                                      </CellContents>
+                                    </TablixCornerCell>
+                                  </TablixCornerRow>
+                                  <TablixCornerRow>
+                                    <TablixCornerCell />
+                                  </TablixCornerRow>
+                                  <TablixCornerRow>
+                                    <TablixCornerCell />
+                                  </TablixCornerRow>
+                                  <TablixCornerRow>
+                                    <TablixCornerCell />
+                                  </TablixCornerRow>
+                                  <TablixCornerRow>
+                                    <TablixCornerCell />
+                                  </TablixCornerRow>
+                                  <TablixCornerRow>
+                                    <TablixCornerCell />
+                                  </TablixCornerRow>
+                                  <TablixCornerRow>
+                                    <TablixCornerCell />
+                                  </TablixCornerRow>
+                                  <TablixCornerRow>
+                                    <TablixCornerCell />
+                                  </TablixCornerRow>
+                                  <TablixCornerRow>
+                                    <TablixCornerCell />
+                                  </TablixCornerRow>
+                                  <TablixCornerRow>
+                                    <TablixCornerCell />
+                                  </TablixCornerRow>
+                                  <TablixCornerRow>
+                                    <TablixCornerCell />
+                                  </TablixCornerRow>
+                                  <TablixCornerRow>
+                                    <TablixCornerCell />
+                                  </TablixCornerRow>
+                                  <TablixCornerRow>
+                                    <TablixCornerCell />
+                                  </TablixCornerRow>
+                                  <TablixCornerRow>
+                                    <TablixCornerCell />
+                                  </TablixCornerRow>
+                                </TablixCornerRows>
+                              </TablixCorner>
+                              <TablixBody>
+                                <TablixColumns>
+                                  <TablixColumn>
+                                    <Width>1in</Width>
+                                  </TablixColumn>
+                                </TablixColumns>
+                                <TablixRows>
+                                  <TablixRow>
+                                    <Height>0.21in</Height>
+                                    <TablixCells>
+                                      <TablixCell>
+                                        <CellContents>
+                                          <Textbox Name="textbox2">
+                                            <CanGrow>true</CanGrow>
+                                            <KeepTogether>true</KeepTogether>
+                                            <Paragraphs>
+                                              <Paragraph>
+                                                <TextRuns>
+                                                  <TextRun>
+                                                    <Value>=Sum(Fields!Net_Income.Value)</Value>
+                                                    <Style>
+                                                      <FontFamily />
+                                                      <Color>#333333</Color>
+                                                    </Style>
+                                                  </TextRun>
+                                                </TextRuns>
+                                                <Style />
+                                              </Paragraph>
+                                            </Paragraphs>
+                                            <rd:DefaultName>textbox2</rd:DefaultName>
+                                            <Height>0.21in</Height>
+                                            <Width>1in</Width>
+                                            <Style>
+                                              <Border>
+                                                <Color>LightGrey</Color>
+                                              </Border>
+                                              <BottomBorder>
+                                                <Style>Solid</Style>
+                                              </BottomBorder>
+                                              <FontFamily />
+                                              <PaddingLeft>2pt</PaddingLeft>
+                                              <PaddingRight>2pt</PaddingRight>
+                                              <PaddingTop>2pt</PaddingTop>
+                                              <PaddingBottom>2pt</PaddingBottom>
+                                            </Style>
+                                          </Textbox>
+                                        </CellContents>
+                                        <DataElementOutput>Output</DataElementOutput>
+                                      </TablixCell>
+                                    </TablixCells>
+                                  </TablixRow>
+                                </TablixRows>
+                              </TablixBody>
+                              <TablixColumnHierarchy>
+                                <TablixMembers>
+                                  <TablixMember>
+                                    <Group Name="matrix1_Commissions_and_Fees">
+                                      <GroupExpressions>
+                                        <GroupExpression>=Fields!Commissions_and_Fees.Value</GroupExpression>
+                                      </GroupExpressions>
+                                    </Group>
+                                    <SortExpressions>
+                                      <SortExpression>
+                                        <Value>=Fields!Commissions_and_Fees.Value</Value>
+                                      </SortExpression>
+                                    </SortExpressions>
+                                    <TablixHeader>
+                                      <Size>0.21in</Size>
+                                      <CellContents>
+                                        <Textbox Name="Commissions_and_Fees">
+                                          <CanGrow>true</CanGrow>
+                                          <KeepTogether>true</KeepTogether>
+                                          <Paragraphs>
+                                            <Paragraph>
+                                              <TextRuns>
+                                                <TextRun>
+                                                  <Value>=Fields!Commissions_and_Fees.Value</Value>
+                                                  <Style>
+                                                    <FontFamily />
+                                                  </Style>
+                                                </TextRun>
+                                              </TextRuns>
+                                              <Style>
+                                                <FontFamily />
+                                                <TextAlign>Left</TextAlign>
+                                              </Style>
+                                            </Paragraph>
+                                          </Paragraphs>
+                                          <rd:DefaultName>Commissions_and_Fees</rd:DefaultName>
+                                          <Height>0.21in</Height>
+                                          <Width>1in</Width>
+                                          <Style>
+                                            <Border>
+                                              <Color>LightGrey</Color>
+                                            </Border>
+                                            <FontFamily />
+                                            <PaddingLeft>2pt</PaddingLeft>
+                                            <PaddingRight>2pt</PaddingRight>
+                                            <PaddingTop>2pt</PaddingTop>
+                                            <PaddingBottom>2pt</PaddingBottom>
+                                          </Style>
+                                        </Textbox>
+                                      </CellContents>
+                                    </TablixHeader>
+                                    <TablixMembers>
+                                      <TablixMember>
+                                        <Group Name="matrix1_Administration_and_Other_Fiduciary_Fees">
+                                          <GroupExpressions>
+                                            <GroupExpression>=Fields!Administration_and_Other_Fiduciary_Fees.Value</GroupExpression>
+                                          </GroupExpressions>
+                                        </Group>
+                                        <SortExpressions>
+                                          <SortExpression>
+                                            <Value>=Fields!Administration_and_Other_Fiduciary_Fees.Value</Value>
+                                          </SortExpression>
+                                        </SortExpressions>
+                                        <TablixHeader>
+                                          <Size>0.21in</Size>
+                                          <CellContents>
+                                            <Textbox Name="Administration_and_Other_Fiduciary_Fees">
+                                              <CanGrow>true</CanGrow>
+                                              <KeepTogether>true</KeepTogether>
+                                              <Paragraphs>
+                                                <Paragraph>
+                                                  <TextRuns>
+                                                    <TextRun>
+                                                      <Value>=Fields!Administration_and_Other_Fiduciary_Fees.Value</Value>
+                                                      <Style>
+                                                        <FontFamily />
+                                                      </Style>
+                                                    </TextRun>
+                                                  </TextRuns>
+                                                  <Style>
+                                                    <FontFamily />
+                                                    <TextAlign>Left</TextAlign>
+                                                  </Style>
+                                                </Paragraph>
+                                              </Paragraphs>
+                                              <rd:DefaultName>Administration_and_Other_Fiduciary_Fees</rd:DefaultName>
+                                              <Height>0.21in</Height>
+                                              <Width>1in</Width>
+                                              <Style>
+                                                <Border>
+                                                  <Color>LightGrey</Color>
+                                                </Border>
+                                                <FontFamily />
+                                                <PaddingLeft>2pt</PaddingLeft>
+                                                <PaddingRight>2pt</PaddingRight>
+                                                <PaddingTop>2pt</PaddingTop>
+                                                <PaddingBottom>2pt</PaddingBottom>
+                                              </Style>
+                                            </Textbox>
+                                          </CellContents>
+                                        </TablixHeader>
+                                        <TablixMembers>
+                                          <TablixMember>
+                                            <Group Name="matrix1_Investment_Banking">
+                                              <GroupExpressions>
+                                                <GroupExpression>=Fields!Investment_Banking.Value</GroupExpression>
+                                              </GroupExpressions>
+                                            </Group>
+                                            <SortExpressions>
+                                              <SortExpression>
+                                                <Value>=Fields!Investment_Banking.Value</Value>
+                                              </SortExpression>
+                                            </SortExpressions>
+                                            <TablixHeader>
+                                              <Size>0.21in</Size>
+                                              <CellContents>
+                                                <Textbox Name="Investment_Banking">
+                                                  <CanGrow>true</CanGrow>
+                                                  <KeepTogether>true</KeepTogether>
+                                                  <Paragraphs>
+                                                    <Paragraph>
+                                                      <TextRuns>
+                                                        <TextRun>
+                                                          <Value>=Fields!Investment_Banking.Value</Value>
+                                                          <Style>
+                                                            <FontFamily />
+                                                          </Style>
+                                                        </TextRun>
+                                                      </TextRuns>
+                                                      <Style>
+                                                        <FontFamily />
+                                                        <TextAlign>Left</TextAlign>
+                                                      </Style>
+                                                    </Paragraph>
+                                                  </Paragraphs>
+                                                  <rd:DefaultName>Investment_Banking</rd:DefaultName>
+                                                  <Height>0.21in</Height>
+                                                  <Width>1in</Width>
+                                                  <Style>
+                                                    <Border>
+                                                      <Color>LightGrey</Color>
+                                                    </Border>
+                                                    <FontFamily />
+                                                    <PaddingLeft>2pt</PaddingLeft>
+                                                    <PaddingRight>2pt</PaddingRight>
+                                                    <PaddingTop>2pt</PaddingTop>
+                                                    <PaddingBottom>2pt</PaddingBottom>
+                                                  </Style>
+                                                </Textbox>
+                                              </CellContents>
+                                            </TablixHeader>
+                                            <TablixMembers>
+                                              <TablixMember>
+                                                <Group Name="matrix1_Principal_Transactions">
+                                                  <GroupExpressions>
+                                                    <GroupExpression>=Fields!Principal_Transactions.Value</GroupExpression>
+                                                  </GroupExpressions>
+                                                </Group>
+                                                <SortExpressions>
+                                                  <SortExpression>
+                                                    <Value>=Fields!Principal_Transactions.Value</Value>
+                                                  </SortExpression>
+                                                </SortExpressions>
+                                                <TablixHeader>
+                                                  <Size>0.21in</Size>
+                                                  <CellContents>
+                                                    <Textbox Name="Principal_Transactions">
+                                                      <CanGrow>true</CanGrow>
+                                                      <KeepTogether>true</KeepTogether>
+                                                      <Paragraphs>
+                                                        <Paragraph>
+                                                          <TextRuns>
+                                                            <TextRun>
+                                                              <Value>=Fields!Principal_Transactions.Value</Value>
+                                                              <Style>
+                                                                <FontFamily />
+                                                              </Style>
+                                                            </TextRun>
+                                                          </TextRuns>
+                                                          <Style>
+                                                            <FontFamily />
+                                                            <TextAlign>Left</TextAlign>
+                                                          </Style>
+                                                        </Paragraph>
+                                                      </Paragraphs>
+                                                      <rd:DefaultName>Principal_Transactions</rd:DefaultName>
+                                                      <Height>0.21in</Height>
+                                                      <Width>1in</Width>
+                                                      <Style>
+                                                        <Border>
+                                                          <Color>LightGrey</Color>
+                                                        </Border>
+                                                        <FontFamily />
+                                                        <PaddingLeft>2pt</PaddingLeft>
+                                                        <PaddingRight>2pt</PaddingRight>
+                                                        <PaddingTop>2pt</PaddingTop>
+                                                        <PaddingBottom>2pt</PaddingBottom>
+                                                      </Style>
+                                                    </Textbox>
+                                                  </CellContents>
+                                                </TablixHeader>
+                                                <TablixMembers>
+                                                  <TablixMember>
+                                                    <Group Name="matrix1_Other">
+                                                      <GroupExpressions>
+                                                        <GroupExpression>=Fields!Other.Value</GroupExpression>
+                                                      </GroupExpressions>
+                                                    </Group>
+                                                    <SortExpressions>
+                                                      <SortExpression>
+                                                        <Value>=Fields!Other.Value</Value>
+                                                      </SortExpression>
+                                                    </SortExpressions>
+                                                    <TablixHeader>
+                                                      <Size>0.21in</Size>
+                                                      <CellContents>
+                                                        <Textbox Name="Other">
+                                                          <CanGrow>true</CanGrow>
+                                                          <KeepTogether>true</KeepTogether>
+                                                          <Paragraphs>
+                                                            <Paragraph>
+                                                              <TextRuns>
+                                                                <TextRun>
+                                                                  <Value>=Fields!Other.Value</Value>
+                                                                  <Style>
+                                                                    <FontFamily />
+                                                                  </Style>
+                                                                </TextRun>
+                                                              </TextRuns>
+                                                              <Style>
+                                                                <FontFamily />
+                                                                <TextAlign>Left</TextAlign>
+                                                              </Style>
+                                                            </Paragraph>
+                                                          </Paragraphs>
+                                                          <rd:DefaultName>Other</rd:DefaultName>
+                                                          <Height>0.21in</Height>
+                                                          <Width>1in</Width>
+                                                          <Style>
+                                                            <Border>
+                                                              <Color>LightGrey</Color>
+                                                            </Border>
+                                                            <FontFamily />
+                                                            <PaddingLeft>2pt</PaddingLeft>
+                                                            <PaddingRight>2pt</PaddingRight>
+                                                            <PaddingTop>2pt</PaddingTop>
+                                                            <PaddingBottom>2pt</PaddingBottom>
+                                                          </Style>
+                                                        </Textbox>
+                                                      </CellContents>
+                                                    </TablixHeader>
+                                                    <TablixMembers>
+                                                      <TablixMember>
+                                                        <Group Name="matrix1_Total_Non_Interest_Revenue">
+                                                          <GroupExpressions>
+                                                            <GroupExpression>=Fields!Total_Non_Interest_Revenue.Value</GroupExpression>
+                                                          </GroupExpressions>
+                                                        </Group>
+                                                        <SortExpressions>
+                                                          <SortExpression>
+                                                            <Value>=Fields!Total_Non_Interest_Revenue.Value</Value>
+                                                          </SortExpression>
+                                                        </SortExpressions>
+                                                        <TablixHeader>
+                                                          <Size>0.21in</Size>
+                                                          <CellContents>
+                                                            <Textbox Name="Total_Non_Interest_Revenue">
+                                                              <CanGrow>true</CanGrow>
+                                                              <KeepTogether>true</KeepTogether>
+                                                              <Paragraphs>
+                                                                <Paragraph>
+                                                                  <TextRuns>
+                                                                    <TextRun>
+                                                                      <Value>=Fields!Total_Non_Interest_Revenue.Value</Value>
+                                                                      <Style>
+                                                                        <FontFamily />
+                                                                      </Style>
+                                                                    </TextRun>
+                                                                  </TextRuns>
+                                                                  <Style>
+                                                                    <FontFamily />
+                                                                    <TextAlign>Left</TextAlign>
+                                                                  </Style>
+                                                                </Paragraph>
+                                                              </Paragraphs>
+                                                              <rd:DefaultName>Total_Non_Interest_Revenue</rd:DefaultName>
+                                                              <Height>0.21in</Height>
+                                                              <Width>1in</Width>
+                                                              <Style>
+                                                                <Border>
+                                                                  <Color>LightGrey</Color>
+                                                                </Border>
+                                                                <FontFamily />
+                                                                <PaddingLeft>2pt</PaddingLeft>
+                                                                <PaddingRight>2pt</PaddingRight>
+                                                                <PaddingTop>2pt</PaddingTop>
+                                                                <PaddingBottom>2pt</PaddingBottom>
+                                                              </Style>
+                                                            </Textbox>
+                                                          </CellContents>
+                                                        </TablixHeader>
+                                                        <TablixMembers>
+                                                          <TablixMember>
+                                                            <Group Name="matrix1_Net_Interest_Revenue_including_Dividends">
+                                                              <GroupExpressions>
+                                                                <GroupExpression>=Fields!Net_Interest_Revenue_including_Dividends.Value</GroupExpression>
+                                                              </GroupExpressions>
+                                                            </Group>
+                                                            <SortExpressions>
+                                                              <SortExpression>
+                                                                <Value>=Fields!Net_Interest_Revenue_including_Dividends.Value</Value>
+                                                              </SortExpression>
+                                                            </SortExpressions>
+                                                            <TablixHeader>
+                                                              <Size>0.21in</Size>
+                                                              <CellContents>
+                                                                <Textbox Name="Net_Interest_Revenue_including_Dividends">
+                                                                  <CanGrow>true</CanGrow>
+                                                                  <KeepTogether>true</KeepTogether>
+                                                                  <Paragraphs>
+                                                                    <Paragraph>
+                                                                      <TextRuns>
+                                                                        <TextRun>
+                                                                          <Value>=Fields!Net_Interest_Revenue_including_Dividends.Value</Value>
+                                                                          <Style>
+                                                                            <FontFamily />
+                                                                          </Style>
+                                                                        </TextRun>
+                                                                      </TextRuns>
+                                                                      <Style>
+                                                                        <FontFamily />
+                                                                        <TextAlign>Left</TextAlign>
+                                                                      </Style>
+                                                                    </Paragraph>
+                                                                  </Paragraphs>
+                                                                  <rd:DefaultName>Net_Interest_Revenue_including_Dividends</rd:DefaultName>
+                                                                  <Height>0.21in</Height>
+                                                                  <Width>1in</Width>
+                                                                  <Style>
+                                                                    <Border>
+                                                                      <Color>LightGrey</Color>
+                                                                    </Border>
+                                                                    <FontFamily />
+                                                                    <PaddingLeft>2pt</PaddingLeft>
+                                                                    <PaddingRight>2pt</PaddingRight>
+                                                                    <PaddingTop>2pt</PaddingTop>
+                                                                    <PaddingBottom>2pt</PaddingBottom>
+                                                                  </Style>
+                                                                </Textbox>
+                                                              </CellContents>
+                                                            </TablixHeader>
+                                                            <TablixMembers>
+                                                              <TablixMember>
+                                                                <Group Name="matrix1_Total_Revenues_Net_of_Interest_Expense">
+                                                                  <GroupExpressions>
+                                                                    <GroupExpression>=Fields!Total_Revenues_Net_of_Interest_Expense.Value</GroupExpression>
+                                                                  </GroupExpressions>
+                                                                </Group>
+                                                                <SortExpressions>
+                                                                  <SortExpression>
+                                                                    <Value>=Fields!Total_Revenues_Net_of_Interest_Expense.Value</Value>
+                                                                  </SortExpression>
+                                                                </SortExpressions>
+                                                                <TablixHeader>
+                                                                  <Size>0.21in</Size>
+                                                                  <CellContents>
+                                                                    <Textbox Name="Total_Revenues_Net_of_Interest_Expense">
+                                                                      <CanGrow>true</CanGrow>
+                                                                      <KeepTogether>true</KeepTogether>
+                                                                      <Paragraphs>
+                                                                        <Paragraph>
+                                                                          <TextRuns>
+                                                                            <TextRun>
+                                                                              <Value>=Fields!Total_Revenues_Net_of_Interest_Expense.Value</Value>
+                                                                              <Style>
+                                                                                <FontFamily />
+                                                                              </Style>
+                                                                            </TextRun>
+                                                                          </TextRuns>
+                                                                          <Style>
+                                                                            <FontFamily />
+                                                                            <TextAlign>Left</TextAlign>
+                                                                          </Style>
+                                                                        </Paragraph>
+                                                                      </Paragraphs>
+                                                                      <rd:DefaultName>Total_Revenues_Net_of_Interest_Expense</rd:DefaultName>
+                                                                      <Height>0.21in</Height>
+                                                                      <Width>1in</Width>
+                                                                      <Style>
+                                                                        <Border>
+                                                                          <Color>LightGrey</Color>
+                                                                        </Border>
+                                                                        <FontFamily />
+                                                                        <PaddingLeft>2pt</PaddingLeft>
+                                                                        <PaddingRight>2pt</PaddingRight>
+                                                                        <PaddingTop>2pt</PaddingTop>
+                                                                        <PaddingBottom>2pt</PaddingBottom>
+                                                                      </Style>
+                                                                    </Textbox>
+                                                                  </CellContents>
+                                                                </TablixHeader>
+                                                                <TablixMembers>
+                                                                  <TablixMember>
+                                                                    <Group Name="matrix1_Total_Operating_Expenses">
+                                                                      <GroupExpressions>
+                                                                        <GroupExpression>=Fields!Total_Operating_Expenses.Value</GroupExpression>
+                                                                      </GroupExpressions>
+                                                                    </Group>
+                                                                    <SortExpressions>
+                                                                      <SortExpression>
+                                                                        <Value>=Fields!Total_Operating_Expenses.Value</Value>
+                                                                      </SortExpression>
+                                                                    </SortExpressions>
+                                                                    <TablixHeader>
+                                                                      <Size>0.21in</Size>
+                                                                      <CellContents>
+                                                                        <Textbox Name="Total_Operating_Expenses">
+                                                                          <CanGrow>true</CanGrow>
+                                                                          <KeepTogether>true</KeepTogether>
+                                                                          <Paragraphs>
+                                                                            <Paragraph>
+                                                                              <TextRuns>
+                                                                                <TextRun>
+                                                                                  <Value>=Fields!Total_Operating_Expenses.Value</Value>
+                                                                                  <Style>
+                                                                                    <FontFamily />
+                                                                                  </Style>
+                                                                                </TextRun>
+                                                                              </TextRuns>
+                                                                              <Style>
+                                                                                <FontFamily />
+                                                                                <TextAlign>Left</TextAlign>
+                                                                              </Style>
+                                                                            </Paragraph>
+                                                                          </Paragraphs>
+                                                                          <rd:DefaultName>Total_Operating_Expenses</rd:DefaultName>
+                                                                          <Height>0.21in</Height>
+                                                                          <Width>1in</Width>
+                                                                          <Style>
+                                                                            <Border>
+                                                                              <Color>LightGrey</Color>
+                                                                            </Border>
+                                                                            <FontFamily />
+                                                                            <PaddingLeft>2pt</PaddingLeft>
+                                                                            <PaddingRight>2pt</PaddingRight>
+                                                                            <PaddingTop>2pt</PaddingTop>
+                                                                            <PaddingBottom>2pt</PaddingBottom>
+                                                                          </Style>
+                                                                        </Textbox>
+                                                                      </CellContents>
+                                                                    </TablixHeader>
+                                                                    <TablixMembers>
+                                                                      <TablixMember>
+                                                                        <Group Name="matrix1_Provisions_for_Credit_Losses_and_for_Benefits_and_Claims">
+                                                                          <GroupExpressions>
+                                                                            <GroupExpression>=Fields!Provisions_for_Credit_Losses_and_for_Benefits_and_Claims.Value</GroupExpression>
+                                                                          </GroupExpressions>
+                                                                        </Group>
+                                                                        <SortExpressions>
+                                                                          <SortExpression>
+                                                                            <Value>=Fields!Provisions_for_Credit_Losses_and_for_Benefits_and_Claims.Value</Value>
+                                                                          </SortExpression>
+                                                                        </SortExpressions>
+                                                                        <TablixHeader>
+                                                                          <Size>0.21in</Size>
+                                                                          <CellContents>
+                                                                            <Textbox Name="Provisions_for_Credit_Losses_and_for_Benefits_and_Claims">
+                                                                              <CanGrow>true</CanGrow>
+                                                                              <KeepTogether>true</KeepTogether>
+                                                                              <Paragraphs>
+                                                                                <Paragraph>
+                                                                                  <TextRuns>
+                                                                                    <TextRun>
+                                                                                      <Value>=Fields!Provisions_for_Credit_Losses_and_for_Benefits_and_Claims.Value</Value>
+                                                                                      <Style>
+                                                                                        <FontFamily />
+                                                                                      </Style>
+                                                                                    </TextRun>
+                                                                                  </TextRuns>
+                                                                                  <Style>
+                                                                                    <FontFamily />
+                                                                                    <TextAlign>Left</TextAlign>
+                                                                                  </Style>
+                                                                                </Paragraph>
+                                                                              </Paragraphs>
+                                                                              <rd:DefaultName>Provisions_for_Credit_Losses_and_for_Benefits_and_Claims</rd:DefaultName>
+                                                                              <Height>0.21in</Height>
+                                                                              <Width>1in</Width>
+                                                                              <Style>
+                                                                                <Border>
+                                                                                  <Color>LightGrey</Color>
+                                                                                </Border>
+                                                                                <FontFamily />
+                                                                                <PaddingLeft>2pt</PaddingLeft>
+                                                                                <PaddingRight>2pt</PaddingRight>
+                                                                                <PaddingTop>2pt</PaddingTop>
+                                                                                <PaddingBottom>2pt</PaddingBottom>
+                                                                              </Style>
+                                                                            </Textbox>
+                                                                          </CellContents>
+                                                                        </TablixHeader>
+                                                                        <TablixMembers>
+                                                                          <TablixMember>
+                                                                            <Group Name="matrix1_Income_from_Continuing_Operations_before_Taxes">
+                                                                              <GroupExpressions>
+                                                                                <GroupExpression>=Fields!Income_from_Continuing_Operations_before_Taxes.Value</GroupExpression>
+                                                                              </GroupExpressions>
+                                                                            </Group>
+                                                                            <SortExpressions>
+                                                                              <SortExpression>
+                                                                                <Value>=Fields!Income_from_Continuing_Operations_before_Taxes.Value</Value>
+                                                                              </SortExpression>
+                                                                            </SortExpressions>
+                                                                            <TablixHeader>
+                                                                              <Size>0.21in</Size>
+                                                                              <CellContents>
+                                                                                <Textbox Name="Income_from_Continuing_Operations_before_Taxes">
+                                                                                  <CanGrow>true</CanGrow>
+                                                                                  <KeepTogether>true</KeepTogether>
+                                                                                  <Paragraphs>
+                                                                                    <Paragraph>
+                                                                                      <TextRuns>
+                                                                                        <TextRun>
+                                                                                          <Value>=Fields!Income_from_Continuing_Operations_before_Taxes.Value</Value>
+                                                                                          <Style>
+                                                                                            <FontFamily />
+                                                                                          </Style>
+                                                                                        </TextRun>
+                                                                                      </TextRuns>
+                                                                                      <Style>
+                                                                                        <FontFamily />
+                                                                                        <TextAlign>Left</TextAlign>
+                                                                                      </Style>
+                                                                                    </Paragraph>
+                                                                                  </Paragraphs>
+                                                                                  <rd:DefaultName>Income_from_Continuing_Operations_before_Taxes</rd:DefaultName>
+                                                                                  <Height>0.21in</Height>
+                                                                                  <Width>1in</Width>
+                                                                                  <Style>
+                                                                                    <Border>
+                                                                                      <Color>LightGrey</Color>
+                                                                                    </Border>
+                                                                                    <FontFamily />
+                                                                                    <PaddingLeft>2pt</PaddingLeft>
+                                                                                    <PaddingRight>2pt</PaddingRight>
+                                                                                    <PaddingTop>2pt</PaddingTop>
+                                                                                    <PaddingBottom>2pt</PaddingBottom>
+                                                                                  </Style>
+                                                                                </Textbox>
+                                                                              </CellContents>
+                                                                            </TablixHeader>
+                                                                            <TablixMembers>
+                                                                              <TablixMember>
+                                                                                <Group Name="matrix1_Income_Taxes">
+                                                                                  <GroupExpressions>
+                                                                                    <GroupExpression>=Fields!Income_Taxes.Value</GroupExpression>
+                                                                                  </GroupExpressions>
+                                                                                </Group>
+                                                                                <SortExpressions>
+                                                                                  <SortExpression>
+                                                                                    <Value>=Fields!Income_Taxes.Value</Value>
+                                                                                  </SortExpression>
+                                                                                </SortExpressions>
+                                                                                <TablixHeader>
+                                                                                  <Size>0.21in</Size>
+                                                                                  <CellContents>
+                                                                                    <Textbox Name="Income_Taxes">
+                                                                                      <CanGrow>true</CanGrow>
+                                                                                      <KeepTogether>true</KeepTogether>
+                                                                                      <Paragraphs>
+                                                                                        <Paragraph>
+                                                                                          <TextRuns>
+                                                                                            <TextRun>
+                                                                                              <Value>=Fields!Income_Taxes.Value</Value>
+                                                                                              <Style>
+                                                                                                <FontFamily />
+                                                                                              </Style>
+                                                                                            </TextRun>
+                                                                                          </TextRuns>
+                                                                                          <Style>
+                                                                                            <FontFamily />
+                                                                                            <TextAlign>Left</TextAlign>
+                                                                                          </Style>
+                                                                                        </Paragraph>
+                                                                                      </Paragraphs>
+                                                                                      <rd:DefaultName>Income_Taxes</rd:DefaultName>
+                                                                                      <Height>0.21in</Height>
+                                                                                      <Width>1in</Width>
+                                                                                      <Style>
+                                                                                        <Border>
+                                                                                          <Color>LightGrey</Color>
+                                                                                        </Border>
+                                                                                        <FontFamily />
+                                                                                        <PaddingLeft>2pt</PaddingLeft>
+                                                                                        <PaddingRight>2pt</PaddingRight>
+                                                                                        <PaddingTop>2pt</PaddingTop>
+                                                                                        <PaddingBottom>2pt</PaddingBottom>
+                                                                                      </Style>
+                                                                                    </Textbox>
+                                                                                  </CellContents>
+                                                                                </TablixHeader>
+                                                                                <TablixMembers>
+                                                                                  <TablixMember>
+                                                                                    <Group Name="matrix1_Income_from_Continuing_Operations">
+                                                                                      <GroupExpressions>
+                                                                                        <GroupExpression>=Fields!Income_from_Continuing_Operations.Value</GroupExpression>
+                                                                                      </GroupExpressions>
+                                                                                    </Group>
+                                                                                    <SortExpressions>
+                                                                                      <SortExpression>
+                                                                                        <Value>=Fields!Income_from_Continuing_Operations.Value</Value>
+                                                                                      </SortExpression>
+                                                                                    </SortExpressions>
+                                                                                    <TablixHeader>
+                                                                                      <Size>0.21in</Size>
+                                                                                      <CellContents>
+                                                                                        <Textbox Name="Income_from_Continuing_Operations">
+                                                                                          <CanGrow>true</CanGrow>
+                                                                                          <KeepTogether>true</KeepTogether>
+                                                                                          <Paragraphs>
+                                                                                            <Paragraph>
+                                                                                              <TextRuns>
+                                                                                                <TextRun>
+                                                                                                  <Value>=Fields!Income_from_Continuing_Operations.Value</Value>
+                                                                                                  <Style>
+                                                                                                    <FontFamily />
+                                                                                                  </Style>
+                                                                                                </TextRun>
+                                                                                              </TextRuns>
+                                                                                              <Style>
+                                                                                                <FontFamily />
+                                                                                                <TextAlign>Left</TextAlign>
+                                                                                              </Style>
+                                                                                            </Paragraph>
+                                                                                          </Paragraphs>
+                                                                                          <rd:DefaultName>Income_from_Continuing_Operations</rd:DefaultName>
+                                                                                          <Height>0.21in</Height>
+                                                                                          <Width>1in</Width>
+                                                                                          <Style>
+                                                                                            <Border>
+                                                                                              <Color>LightGrey</Color>
+                                                                                            </Border>
+                                                                                            <FontFamily />
+                                                                                            <PaddingLeft>2pt</PaddingLeft>
+                                                                                            <PaddingRight>2pt</PaddingRight>
+                                                                                            <PaddingTop>2pt</PaddingTop>
+                                                                                            <PaddingBottom>2pt</PaddingBottom>
+                                                                                          </Style>
+                                                                                        </Textbox>
+                                                                                      </CellContents>
+                                                                                    </TablixHeader>
+                                                                                    <TablixMembers>
+                                                                                      <TablixMember>
+                                                                                        <Group Name="matrix1_Noncontrolling_Interests">
+                                                                                          <GroupExpressions>
+                                                                                            <GroupExpression>=Fields!Noncontrolling_Interests.Value</GroupExpression>
+                                                                                          </GroupExpressions>
+                                                                                        </Group>
+                                                                                        <SortExpressions>
+                                                                                          <SortExpression>
+                                                                                            <Value>=Fields!Noncontrolling_Interests.Value</Value>
+                                                                                          </SortExpression>
+                                                                                        </SortExpressions>
+                                                                                        <TablixHeader>
+                                                                                          <Size>0.21in</Size>
+                                                                                          <CellContents>
+                                                                                            <Textbox Name="Noncontrolling_Interests">
+                                                                                              <CanGrow>true</CanGrow>
+                                                                                              <KeepTogether>true</KeepTogether>
+                                                                                              <Paragraphs>
+                                                                                                <Paragraph>
+                                                                                                  <TextRuns>
+                                                                                                    <TextRun>
+                                                                                                      <Value>=Fields!Noncontrolling_Interests.Value</Value>
+                                                                                                      <Style>
+                                                                                                        <FontFamily />
+                                                                                                      </Style>
+                                                                                                    </TextRun>
+                                                                                                  </TextRuns>
+                                                                                                  <Style>
+                                                                                                    <FontFamily />
+                                                                                                    <TextAlign>Left</TextAlign>
+                                                                                                  </Style>
+                                                                                                </Paragraph>
+                                                                                              </Paragraphs>
+                                                                                              <rd:DefaultName>Noncontrolling_Interests</rd:DefaultName>
+                                                                                              <Height>0.21in</Height>
+                                                                                              <Width>1in</Width>
+                                                                                              <Style>
+                                                                                                <Border>
+                                                                                                  <Color>LightGrey</Color>
+                                                                                                </Border>
+                                                                                                <FontFamily />
+                                                                                                <PaddingLeft>2pt</PaddingLeft>
+                                                                                                <PaddingRight>2pt</PaddingRight>
+                                                                                                <PaddingTop>2pt</PaddingTop>
+                                                                                                <PaddingBottom>2pt</PaddingBottom>
+                                                                                              </Style>
+                                                                                            </Textbox>
+                                                                                          </CellContents>
+                                                                                        </TablixHeader>
+                                                                                        <DataElementOutput>Output</DataElementOutput>
+                                                                                        <KeepTogether>true</KeepTogether>
+                                                                                      </TablixMember>
+                                                                                    </TablixMembers>
+                                                                                    <DataElementOutput>Output</DataElementOutput>
+                                                                                  </TablixMember>
+                                                                                </TablixMembers>
+                                                                                <DataElementOutput>Output</DataElementOutput>
+                                                                              </TablixMember>
+                                                                            </TablixMembers>
+                                                                            <DataElementOutput>Output</DataElementOutput>
+                                                                          </TablixMember>
+                                                                        </TablixMembers>
+                                                                        <DataElementOutput>Output</DataElementOutput>
+                                                                      </TablixMember>
+                                                                    </TablixMembers>
+                                                                    <DataElementOutput>Output</DataElementOutput>
+                                                                  </TablixMember>
+                                                                </TablixMembers>
+                                                                <DataElementOutput>Output</DataElementOutput>
+                                                              </TablixMember>
+                                                            </TablixMembers>
+                                                            <DataElementOutput>Output</DataElementOutput>
+                                                          </TablixMember>
+                                                        </TablixMembers>
+                                                        <DataElementOutput>Output</DataElementOutput>
+                                                      </TablixMember>
+                                                    </TablixMembers>
+                                                    <DataElementOutput>Output</DataElementOutput>
+                                                  </TablixMember>
+                                                </TablixMembers>
+                                                <DataElementOutput>Output</DataElementOutput>
+                                              </TablixMember>
+                                            </TablixMembers>
+                                            <DataElementOutput>Output</DataElementOutput>
+                                          </TablixMember>
+                                        </TablixMembers>
+                                        <DataElementOutput>Output</DataElementOutput>
+                                      </TablixMember>
+                                    </TablixMembers>
+                                    <DataElementOutput>Output</DataElementOutput>
+                                  </TablixMember>
+                                </TablixMembers>
+                              </TablixColumnHierarchy>
+                              <TablixRowHierarchy>
+                                <TablixMembers>
+                                  <TablixMember>
+                                    <Group Name="matrix1_Filing_Quarter">
+                                      <GroupExpressions>
+                                        <GroupExpression>=Fields!Filing_Quarter.Value</GroupExpression>
+                                      </GroupExpressions>
+                                    </Group>
+                                    <SortExpressions>
+                                      <SortExpression>
+                                        <Value>=Fields!Filing_Quarter.Value</Value>
+                                      </SortExpression>
+                                    </SortExpressions>
+                                    <TablixHeader>
+                                      <Size>1in</Size>
+                                      <CellContents>
+                                        <Textbox Name="Filing_Quarter">
+                                          <CanGrow>true</CanGrow>
+                                          <KeepTogether>true</KeepTogether>
+                                          <Paragraphs>
+                                            <Paragraph>
+                                              <TextRuns>
+                                                <TextRun>
+                                                  <Value>=Fields!Filing_Quarter.Value</Value>
+                                                  <Style>
+                                                    <FontFamily />
+                                                  </Style>
+                                                </TextRun>
+                                              </TextRuns>
+                                              <Style>
+                                                <FontFamily />
+                                                <TextAlign>Right</TextAlign>
+                                              </Style>
+                                            </Paragraph>
+                                          </Paragraphs>
+                                          <rd:DefaultName>Filing_Quarter</rd:DefaultName>
+                                          <Height>0.21in</Height>
+                                          <Width>1in</Width>
+                                          <Style>
+                                            <Border>
+                                              <Color>LightGrey</Color>
+                                            </Border>
+                                            <FontFamily />
+                                            <PaddingLeft>2pt</PaddingLeft>
+                                            <PaddingRight>2pt</PaddingRight>
+                                            <PaddingTop>2pt</PaddingTop>
+                                            <PaddingBottom>2pt</PaddingBottom>
+                                          </Style>
+                                        </Textbox>
+                                      </CellContents>
+                                    </TablixHeader>
+                                    <DataElementOutput>Output</DataElementOutput>
+                                    <KeepTogether>true</KeepTogether>
+                                  </TablixMember>
+                                </TablixMembers>
+                              </TablixRowHierarchy>
+                              <RepeatColumnHeaders>true</RepeatColumnHeaders>
+                              <RepeatRowHeaders>true</RepeatRowHeaders>
+                              <DataSetName>DataSet1</DataSetName>
+                              <Top>0.5in</Top>
+                              <Style />
+                            </Tablix>
+                          </ReportItems>
+                          <KeepTogether>true</KeepTogether>
+                          <Style />
+                        </Rectangle>
+                      </CellContents>
+                    </TablixCell>
+                  </TablixCells>
+                </TablixRow>
+              </TablixRows>
+            </TablixBody>
+            <TablixColumnHierarchy>
+              <TablixMembers>
+                <TablixMember />
+              </TablixMembers>
+            </TablixColumnHierarchy>
+            <TablixRowHierarchy>
+              <TablixMembers>
+                <TablixMember>
+                  <Group Name="list1_RowNumber">
+                    <GroupExpressions>
+                      <GroupExpression>=Fields!RowNumber.Value</GroupExpression>
+                    </GroupExpressions>
+                    <PageBreak>
+                      <BreakLocation>Between</BreakLocation>
+                    </PageBreak>
+                  </Group>
+                  <SortExpressions>
+                    <SortExpression>
+                      <Value>=Fields!RowNumber.Value</Value>
+                    </SortExpression>
+                  </SortExpressions>
+                  <DataElementOutput>Output</DataElementOutput>
+                  <KeepTogether>true</KeepTogether>
+                </TablixMember>
+              </TablixMembers>
+            </TablixRowHierarchy>
+            <DataSetName>DataSet1</DataSetName>
+            <PageBreak>
+              <BreakLocation>End</BreakLocation>
+            </PageBreak>
+            <Top>0.43in</Top>
+            <Style>
+              <FontSize>14pt</FontSize>
+            </Style>
+          </Tablix>
+        </ReportItems>
+        <Height>4.08in</Height>
+        <Style />
+      </Body>
+      <Width>5in</Width>
+      <Page>
+        <LeftMargin>1in</LeftMargin>
+        <RightMargin>1in</RightMargin>
+        <TopMargin>1in</TopMargin>
+        <BottomMargin>1in</BottomMargin>
+        <Style />
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <ReportParametersLayout>
+    <GridLayoutDefinition>
+      <NumberOfColumns>4</NumberOfColumns>
+      <NumberOfRows>2</NumberOfRows>
+    </GridLayoutDefinition>
+  </ReportParametersLayout>
+  <Language>en-US</Language>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
+  <rd:ReportUnitType>Invalid</rd:ReportUnitType>
+  <rd:ReportID>43f7dc6e-82e9-4f2f-a6c7-d9c596df4e84</rd:ReportID>
+</Report>
